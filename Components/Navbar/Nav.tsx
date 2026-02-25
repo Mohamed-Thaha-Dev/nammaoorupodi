@@ -44,7 +44,7 @@ export default function MenuBar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-2 rounded-lg text-md font-medium transition-all duration-200  ${
+                className={`px-3 py-2 rounded-lg text-md font-medium transition-all duration-200   ${
                   (link.href === "/" && pathname === "/") ||
                   (link.href !== "/" && pathname.startsWith(link.href))
                     ? "bg-green-600 text-white"

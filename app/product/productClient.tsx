@@ -5,13 +5,15 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HeroScrollVideo from "@/Components/Home/HomeSection";
 import Image from "next/image";
-import Banner from "@/Components/Home/Banner";
+import Banner from "@/Components/Comman/Banner";
 
-import SubHero from "@/Components/SubHero";
+import SubHero from "@/Components/Comman/SubHero";
+import Stats from "@/Components/Comman/Stats";
+import FeatureSection from "@/Components/Comman/FeatureSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function KiraiProducts() {
+export default function ProductsPage() {
   const sectionsRef = useRef<Array<HTMLElement | null>>([]);
 
   const products = [
@@ -176,7 +178,7 @@ export default function KiraiProducts() {
                   {product.tag}
                 </p>
 
-                <h2 className="text-4xl font-bold mb-6 text-gray-900">
+                <h2 className="text-4xl mb-6 text-gray-900 [font-family:var(--font-heading)] font-normal">
                   {product.title}
                 </h2>
 
@@ -210,6 +212,7 @@ export default function KiraiProducts() {
           </div>
         </section>
       ))}
+      <FeatureSection/>
       <Banner/>
     </div>
   );

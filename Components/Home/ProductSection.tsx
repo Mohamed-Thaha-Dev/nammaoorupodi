@@ -30,7 +30,7 @@ const ProductSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Title */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-green-900">
+          <h2 className="text-4xl md:text-5xl font-black text-green-900 [font-family:var(--font-heading)]">
             Our Organic Collection
           </h2>
           <p className="mt-4 text-gray-600 text-lg">

@@ -21,7 +21,7 @@ const Banner = () => {
 
   {/* Content */}
   <div className="relative max-w-4xl mx-auto px-6 text-center text-white">
-    <h2 className="text-4xl md:text-5xl font-semibold mb-6">
+    <h2 className="text-4xl md:text-5xl font-semibold mb-6 [font-family:var(--font-heading)]">
       Ready to Go Natural?
     </h2>
 

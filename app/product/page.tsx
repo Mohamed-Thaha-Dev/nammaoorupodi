@@ -1,5 +1,7 @@
-import ParallaxGSAP from "./productClient";
+import ProductsPage from "./productClient";
+
+
 
 export default function page(){
-    return <ParallaxGSAP/>
+    return <ProductsPage/>
 }

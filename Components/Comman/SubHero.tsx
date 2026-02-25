@@ -80,7 +80,7 @@ export default function SubHero({
       <div className="hero-animate space-y-4">
         <p className="text-sm tracking-[8px] uppercase text-green-600">{tag}</p>
 
-        <h1 className="text-4xl md:text-5xl font-semibold">{title}</h1>
+        <h1 className="text-4xl md:text-5xl font-semibold [font-family:var(--font-heading)]">{title}</h1>
 
         <p className="max-w-xl mx-auto text-gray-600">{subtitle}</p>
       </div>

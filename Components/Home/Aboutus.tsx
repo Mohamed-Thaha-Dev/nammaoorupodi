@@ -126,7 +126,7 @@ const AboutUs = () => {
 
         {/* Content */}
         <div ref={textRef}>
-          <h2 className="text-4xl md:text-5xl font-black text-green-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-black text-green-900 mb-6 [font-family:var(--font-heading)]">
             Our Organic Heritage
           </h2>
 

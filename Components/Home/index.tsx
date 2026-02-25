@@ -2,7 +2,7 @@ import AboutUs from "@/Components/Home/Aboutus";
 import HeroScrollVideo from "@/Components/Home/HomeSection";
 import ProductSection from "./ProductSection";
 import WhyChooseUs from "./WhyChooseUs";
-import Banner from "./Banner";
+import Banner from "../Comman/Banner";
 
 
 export default function HomePage(){

@@ -4,15 +4,44 @@ import "./globals.css";
 import MenuBar from "@/Components/Navbar/Nav";
 import Navbar from "@/Components/Navbar/navbar";
 import Footer from "@/Components/Footer/Footer";
+// import { Playfair_Display, Poppins,Inter } from "next/font/google";
+import { Lora, Nunito } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
+
+// const playfair = Playfair_Display({
+//   subsets: ["latin"],
+//   weight: ["600", "700"],
+//   variable: "--font-heading",
+//   display: "swap",
+// });
+
+// const poppins = Poppins({
+//   subsets: ["latin"],
+//   weight: ["400", "500"],
+//   variable: "--font-body",
+//   display: "swap",
+// });
+const lora = Lora({
   subsets: ["latin"],
+  weight: ["500", "700"], // heading use
+  variable: "--font-heading",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const nunito = Nunito({
   subsets: ["latin"],
+  weight: ["400", "500"], // body use
+  variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,9 +55,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${lora.variable} ${nunito.variable}`}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#685241]`}
+        className={`[font-family:var(--font-body)] antialiased bg-[#685241]`}
       >
         <div className="bg-[#f2ede2] min-h-screen flex flex-col">
           <Navbar />

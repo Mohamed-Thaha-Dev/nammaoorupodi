@@ -282,7 +282,7 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
               el,
               {
                 rotationX: 80,
-                y: -36,
+                y: -50,
                 scale: 0.86,
                 opacity: 0,
                 filter: "blur(4px)",
@@ -512,7 +512,7 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
         />
 
         <div className="hsv-headline mt-20">
-          <h1 className="hsv-title">{title}</h1>
+          <h1 className="hsv-title [font-family:var(--font-heading)]">{title}</h1>
           {subtitle ? <h2 className="hsv-subtitle">{subtitle}</h2> : null}
           {button ? (
             <div className="mt-6">
@@ -538,7 +538,7 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
             <div className="hsv-overlay" ref={overlayRef}>
               <div className="mt-10 flex flex-col">
                 {overlay?.caption ? (
-                  <div className="hsv-caption" ref={overlayCaptionRef}>
+                  <div className="hsv-caption [font-family:var(--font-heading)]" ref={overlayCaptionRef}>
                     {overlay.caption}
                   </div>
                 ) : null}

@@ -1,6 +1,7 @@
-import AboutSection from "./aboutClient";
-import AboutSection3 from "./aboutSection";
+import AboutPage from "./aboutPage";
+
+
 
 export default function page(){
-    return <AboutSection3/>
+    return <AboutPage/>
 }

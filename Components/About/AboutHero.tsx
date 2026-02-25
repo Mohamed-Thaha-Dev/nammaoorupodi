@@ -6,24 +6,32 @@ import { ArrowRight } from "lucide-react";
 import { gsap } from "gsap";
 
 import Image from "next/image";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function AboutSection3() {
+gsap.registerPlugin(ScrollTrigger);
+
+export default function AboutHeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const elementsRef = useRef<HTMLDivElement[]>([]);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(elementsRef.current, {
-        y: 40,
+useEffect(() => {
+  const ctx = gsap.context(() => {
+    elementsRef.current.forEach((el) => {
+      gsap.from(el, {
+        y: 60,
         opacity: 0,
-        stagger: 0.15,
-        duration: 0.8,
+        duration: 1,
         ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+        },
       });
-    }, sectionRef);
+    });
+  }, sectionRef);
 
-    return () => ctx.revert();
-  }, []);
+  return () => ctx.revert();
+}, []);
 
   const addToRefs = (el: HTMLDivElement | null) => {
     if (el && !elementsRef.current.includes(el)) {
@@ -37,30 +45,31 @@ export default function AboutSection3() {
         {/* Header */}
         <div className="flex justify-center items-center mb-10">
           <div
-  ref={addToRefs}
-  className="relative w-full rounded-lg overflow-hidden border-none"
->
-  {/* Image */}
-  <Image
-    width={400}
-    height={400}
-    src="/bg/hero-bg.webp"
-    alt="Namma Ooru Podi"
-    className="w-full h-[450px] object-cover"
-  />
+            ref={addToRefs}
+            className="relative w-full rounded-lg overflow-hidden border-none"
+          >
+            {/* Image */}
+            <Image
+              width={400}
+              height={400}
+              src="/bg/hero-bg.webp"
+              alt="Namma Ooru Podi"
+              className="w-full h-[450px] object-cover "
+            />
+            <div className="absolute inset-0 bg-black/40"></div>
 
-  {/* Top Left Card */}
-  <div className="absolute left-0 top-0 bg-white p-6 rounded-br-2xl">
-    <h3 className="text-3xl font-bold text-green-600">100%</h3>
-    <p className="text-gray-600 text-sm">Natural Ingredients</p>
-  </div>
+            {/* Top Left Card */}
+            <div className="absolute left-0 top-0 bg-white p-6 rounded-br-2xl z-10">
+              <h3 className="text-3xl font-bold text-green-600">100%</h3>
+              <p className="text-gray-600 text-sm">Natural Ingredients</p>
+            </div>
 
-  {/* Bottom Right Card */}
-  <div className="absolute right-0 bottom-0 bg-white p-6 rounded-tl-2xl">
-    <h3 className="text-3xl font-bold text-green-600">100%</h3>
-    <p className="text-gray-600 text-sm">Natural Ingredients</p>
-  </div>
-</div>
+            {/* Bottom Right Card */}
+            <div className="absolute right-0 bottom-0 bg-white p-6 rounded-tl-2xl z-10">
+              <h3 className="text-3xl font-bold text-green-600">0%</h3>
+              <p className="text-gray-600 text-sm">No preservatives. No chemicals.</p>
+            </div>
+          </div>
 
           {/* <div ref={addToRefs} className="flex gap-3">
             <div className="w-8 h-8 bg-gray-200 rounded-lg" />
@@ -84,22 +93,20 @@ export default function AboutSection3() {
         <div className="grid md:grid-cols-3 gap-10">
           {/* Left Content */}
           <div className="md:col-span-2">
-            <h1 className="text-4xl md:text-5xl font-semibold mb-8">
-              
-                Bringing Back Traditional Village Nutrition.
-              
-            </h1>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-8 [font-family:var(--font-heading)]">
+              Bringing Back Traditional Village Nutrition.
+            </h2>
 
             <div
               ref={addToRefs}
               className="grid md:grid-cols-2 gap-8 text-gray-600"
             >
-              <p>
+              <p className=" font-normal">
                 Namma Ooru Podi started with a simple goal — deliver authentic
                 keerai powder made using traditional sun-drying techniques.
               </p>
 
-              <p>
+              <p className=" font-normal" >
                 We carefully handpick leaves and prepare them without
                 preservatives to ensure purity and natural goodness in every
                 spoon.

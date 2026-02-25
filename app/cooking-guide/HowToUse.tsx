@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SubHero from "@/Components/SubHero";
-import Banner from "@/Components/Home/Banner";
+import SubHero from "@/Components/Comman/SubHero";
+import Banner from "@/Components/Comman/Banner";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,7 +104,7 @@ export default function CookingGuide() {
             key={index}
             className="recipe-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition"
           >
-            <h2 className="text-2xl font-semibold mb-6 text-green-700">
+            <h2 className="text-2xl font-semibold mb-6 text-green-700 [font-family:var(--font-heading)]">
               {recipe.title}
             </h2>
 

@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
       <div className="relative max-w-7xl mx-auto px-6 text-white">
         {/* Section Title */}
         <div className="text-center mb-16 text-white">
-          <h2 className="text-4xl md:text-5xl font-black">Why Choose Us</h2>
+          <h2 className="text-4xl md:text-5xl font-black [font-family:var(--font-heading)]">Why Choose Us</h2>
           <p className="mt-4 text-lg text-green-100">
             We bring purity, tradition, and nutrition to every home.
           </p>
@@ -83,7 +83,7 @@ const WhyChooseUs = () => {
             >
               <div className="text-5xl mb-5">{feature.icon}</div>
 
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+              <h3 className="text-xl font-semibold mb-3 ">{feature.title}</h3>
 
               <p className="text-sm leading-relaxed text-green-100">
                 {feature.desc}
