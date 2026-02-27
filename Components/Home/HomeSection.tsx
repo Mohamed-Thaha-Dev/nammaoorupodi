@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { lazy, useEffect, useMemo, useRef } from "react";
 import type { CSSProperties, ReactNode } from "react";
 
@@ -516,9 +517,11 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
           {subtitle ? <h2 className="hsv-subtitle">{subtitle}</h2> : null}
           {button ? (
             <div className="mt-6">
-              <button className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:scale-105 transition">
+              <Link href="/order">
+              <button className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:scale-105 transition cursor-pointer">
                 {button}
               </button>
+              </Link>
             </div>
           ) : null}
         </div>

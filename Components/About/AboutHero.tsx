@@ -2,11 +2,12 @@
 
 import { useEffect, useRef } from "react";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import { gsap } from "gsap";
 
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -131,9 +132,11 @@ useEffect(() => {
             </div>
 
             <div ref={addToRefs}>
-              <button className="bg-neutral-900 hover:bg-neutral-950 transition-all duration-300 text-white px-5 py-3 rounded-lg font-semibold flex gap-2 ml-auto">
+              <Link href="/product">
+              <button className="bg-neutral-900 hover:bg-neutral-950 transition-all duration-300 text-white px-5 py-3 rounded-lg font-semibold flex gap-2 ml-auto cursor-pointer">
                 EXPLORE PRODUCTS <ArrowRight />
               </button>
+              </Link>
             </div>
           </div>
         </div>

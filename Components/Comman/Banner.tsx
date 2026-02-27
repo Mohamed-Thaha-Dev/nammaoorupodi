@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -29,10 +30,11 @@ const Banner = () => {
       Submit your custom request today and get freshly prepared kirai powder
       delivered to your doorstep.
     </p>
-
-    <button className="bg-white text-green-700 font-medium px-8 py-4 rounded-xl shadow-lg hover:scale-105 hover:bg-green-50 transition duration-300">
+<Link href="/order">
+    <button className="bg-white text-green-700 cursor-pointer font-medium px-8 py-4 rounded-xl shadow-lg hover:scale-105 hover:bg-green-50 transition duration-300">
       Submit a Request →
     </button>
+    </Link>
   </div>
 </section>
   );
