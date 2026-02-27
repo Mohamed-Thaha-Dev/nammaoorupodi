@@ -66,17 +66,17 @@ function Footer() {
 
           {/* Brand */}
           <div className="space-y-5">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 w-50">
               <Image
               width={200}
               height={200}
                 src="/logo.webp"
                 alt="Kirai Logo"
-                className="w-50 h-30 rounded-full"
+                className=" h-auto rounded-full"
               />
             </div>
 
-            <p className="text-sm leading-relaxed text-white">
+            <p className="text-sm leading-relaxed text-white [font-family:var(--font-heading) font-normal]">
               Traditional leaf powders crafted with purity,
               bringing natural wellness to every home.
             </p>
@@ -85,7 +85,7 @@ function Footer() {
           {/* Links */}
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h4 className="text-white text-lg font-semibold mb-6 relative pb-2">
+              <h4 className="text-white text-lg  mb-6 relative pb-2 [font-family:var(--font-heading) font-normal]">
                 {section.title}
                 <span className="absolute left-0 bottom-0 w-10 h-[3px] bg-gradient-to-r from-green-400 to-lime-300 rounded-full"></span>
               </h4>
@@ -113,7 +113,7 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-6 relative pb-2">
+            <h4 className="text-white text-lg  mb-6 relative pb-2 [font-family:var(--font-heading) font-normal]">
               Contact Us
               <span className="absolute left-0 bottom-0 w-10 h-[3px] bg-gradient-to-r from-green-400 to-lime-300 rounded-full"></span>
             </h4>

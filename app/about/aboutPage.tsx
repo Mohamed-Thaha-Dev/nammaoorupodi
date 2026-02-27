@@ -4,6 +4,7 @@ import Stats from "@/Components/Comman/Stats";
 import SubHero from "@/Components/Comman/SubHero";
 import OurProcess from "../../Components/About/OurProcess";
 import OurMission from "@/Components/About/OurMission";
+import Banner from "@/Components/Comman/Banner";
 
 
 export default function AboutPage(){
@@ -15,6 +16,7 @@ export default function AboutPage(){
     {/* <FeatureSection/> */}
     <OurProcess/>
     <OurMission/>
+    <Banner/>
     </>
   )
 }

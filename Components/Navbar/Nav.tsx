@@ -27,15 +27,12 @@ export default function MenuBar() {
           {/* Logo Section */}
           <div className="flex items-center gap-2">
             <Image
-            width={100}
-            height={100}
+              width={100}
+              height={100}
               src="/logo.webp"
               alt="Kirai Powders"
               className="w-full h-20 object-contain"
             />
-            {/* <h1 className="text-xl font-semibold text-green-900">
-              Namma Ooru Podi
-            </h1> */}
           </div>
 
           {/* Desktop Menu */}
