@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
 const AboutUs = () => {
@@ -84,10 +85,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative py-32 overflow-hidden"
-    >
+    <section ref={sectionRef} className="relative py-32 overflow-hidden">
       {/* Background Layer */}
       <div
         ref={bgRef}
@@ -116,8 +114,8 @@ const AboutUs = () => {
         {/* Image */}
         <div ref={imageRef} className="relative">
           <Image
-          width={500}
-          height={500}
+            width={500}
+            height={500}
             src="/images/about-img.webp"
             alt="Kirai Preparation"
             className="rounded-3xl shadow-2xl"
@@ -139,10 +137,11 @@ const AboutUs = () => {
             Every batch reflects purity, sustainability, and our commitment to
             delivering healthy living to every household.
           </p>
-
-          <button className="px-8 py-3 rounded-full bg-green-700 text-white font-semibold hover:scale-105 transition">
-            Learn More
-          </button>
+          <Link href="/about">
+            <button className="px-8 py-3 rounded-full bg-green-700 text-white font-semibold hover:scale-105 transition">
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
     </section>

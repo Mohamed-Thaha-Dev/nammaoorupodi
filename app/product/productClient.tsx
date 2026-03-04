@@ -20,7 +20,7 @@ export default function ProductsPage() {
     {
       id: 1,
       tag: "DRUMSTICK LEAF POWDER",
-      title: "Murungai Kirai Powder",
+      title: "Murungai keerai Powder",
       desc: "Made from carefully selected Murungai leaves, this nutrient-rich superfood supports immunity, bone strength, and daily energy. Packed with essential vitamins and minerals. 100% natural with no added preservatives or chemicals.",
       nutrients: ["Iron", "Calcium", "Vitamin A", "Protein", "Potassium"],
       image: "/products/powder-1.jpg",
@@ -30,7 +30,7 @@ export default function ProductsPage() {
     {
       id: 2,
       tag: "BALLOON VINE LEAF POWDER",
-      title: "Mudakathan Kirai Powder",
+      title: "Mudakathan keerai Powder",
       desc: "Traditionally valued for joint and bone health, this herbal powder helps reduce body discomfort and improve flexibility naturally. Rich in essential nutrients. 100% natural with no added preservatives or chemicals.",
       nutrients: [
         "Calcium",
@@ -46,7 +46,7 @@ export default function ProductsPage() {
     {
       id: 3,
       tag: "CENTELLA ASIATICA POWDER",
-      title: "Vallarai Kirai Powder",
+      title: "Vallarai keerai Powder",
       desc: "Prepared from fresh Vallarai leaves, this herbal powder supports memory, concentration, and overall brain health. Rich in antioxidants and plant nutrients. 100% natural with no added preservatives or chemicals.",
       nutrients: [
         "Iron",
@@ -134,7 +134,7 @@ export default function ProductsPage() {
     <div>
         <SubHero
   tag="OUR COLLECTION"
-  title="Our Kirai Powders"
+  title="Our keerai Powders"
   subtitle="Three traditional leaf powders, carefully prepared to bring nature's best nutrition to your kitchen."
   showHeroExitAnimation={true}
   bg="white"

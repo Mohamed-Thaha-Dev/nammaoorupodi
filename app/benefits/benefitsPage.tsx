@@ -19,7 +19,7 @@ const healthBenefits = [
   {
     icon: <Heart size={28} strokeWidth={1.5} />,
     title: "Heart Health",
-    desc: "Kirai leaves contain nutrients that support healthy blood pressure and cholesterol levels.",
+    desc: "keerai leaves contain nutrients that support healthy blood pressure and cholesterol levels.",
   },
   {
     icon: <Eye size={28} strokeWidth={1.5} />,
@@ -85,9 +85,10 @@ export default function BenefitsPage() {
   return (
     <div className="bg-[#f9f9f9] min-h-screen" ref={sectionRef}>
       <SubHero
-        title="Health Benefits of Our Kirai Powder"
+        title="Health Benefits of Our Keerai Powder"
         subtitle=" Packed with essential nutrients, vitamins and minerals — our
           traditional keerai powder supports your overall wellness naturally."
+          tag="Natural Nutrition"
       />
 
       <section className="max-w-7xl mx-auto px-6 pb-24">

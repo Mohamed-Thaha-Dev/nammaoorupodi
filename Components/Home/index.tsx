@@ -9,13 +9,14 @@ export default function HomePage(){
   return(
     <>
      <HeroScrollVideo
-        title="Traditional Kirai Powders for Healthy Living"
-        subtitle="Cook tasty idly, dosa & meals with our natural kirai powders — made the traditional way."
+        title="Traditional keerai Powders for Healthy Living"
+        subtitle="Cook tasty idly, dosa & meals with our natural keerai powders — made the traditional way."
         media="/video/hero-vid1.mp4"
         overlay={{
           caption: "NAMMA OORU PODI",
           heading: "Healthy Living",
-          paragraphs: ["Natural fiber content aids smooth digestion and gut health."],
+          subheading:"Natural fiber content aids smooth digestion and gut health.",
+          paragraphs: ["🌿 Rich in natural fiber for better digestion","💪 Supports immunity and body strength","🩸 Contains iron and essential nutrients","🌱 Made from 100% natural greens","❤️ Promotes overall health and wellness"],
         }}
         button="Order Now"
         // Force dark theme with custom palette

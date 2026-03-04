@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-import { ArrowRight} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { gsap } from "gsap";
 
 import Image from "next/image";
@@ -15,24 +15,24 @@ export default function AboutHeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const elementsRef = useRef<HTMLDivElement[]>([]);
 
-useEffect(() => {
-  const ctx = gsap.context(() => {
-    elementsRef.current.forEach((el) => {
-      gsap.from(el, {
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",
-        },
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      elementsRef.current.forEach((el) => {
+        gsap.from(el, {
+          y: 60,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+          },
+        });
       });
-    });
-  }, sectionRef);
+    }, sectionRef);
 
-  return () => ctx.revert();
-}, []);
+    return () => ctx.revert();
+  }, []);
 
   const addToRefs = (el: HTMLDivElement | null) => {
     if (el && !elementsRef.current.includes(el)) {
@@ -60,15 +60,19 @@ useEffect(() => {
             <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Top Left Card */}
-            <div className="absolute left-0 top-0 bg-white p-6 rounded-br-2xl z-10">
+            <div className="absolute left-0 top-0 bg-white p-6 rounded-br-2xl z-10 w-50 text-center">
               <h3 className="text-3xl font-bold text-green-600">100%</h3>
               <p className="text-gray-600 text-sm">Natural Ingredients</p>
             </div>
 
             {/* Bottom Right Card */}
-            <div className="absolute right-0 bottom-0 bg-white p-6 rounded-tl-2xl z-10">
-              <h3 className="text-3xl font-bold text-green-600">0%</h3>
-              <p className="text-gray-600 text-sm">No preservatives. No chemicals.</p>
+            <div className="absolute right-0 bottom-0 bg-white p-6 rounded-tl-2xl z-10 ">
+              <h3 className="text-3xl font-bold text-green-600">
+                Pure & Natural
+              </h3>
+              <p className="text-gray-600 text-sm">
+                No preservatives. No chemicals.
+              </p>
             </div>
           </div>
 
@@ -82,8 +86,7 @@ useEffect(() => {
         {/* Stats */}
         <div ref={addToRefs} className="flex justify-between mb-12 text-sm">
           <div>
-            <span className="text-green-600 font-bold">1+</span> Years of
-            Tradition
+            <span className="text-green-600 font-semibold">Home Made</span>
           </div>
           <div>
             <span className="text-green-600 font-bold">100%</span> Natural
@@ -107,7 +110,7 @@ useEffect(() => {
                 keerai powder made using traditional sun-drying techniques.
               </p>
 
-              <p className=" font-normal" >
+              <p className=" font-normal">
                 We carefully handpick leaves and prepare them without
                 preservatives to ensure purity and natural goodness in every
                 spoon.
@@ -133,9 +136,9 @@ useEffect(() => {
 
             <div ref={addToRefs}>
               <Link href="/product">
-              <button className="bg-neutral-900 hover:bg-neutral-950 transition-all duration-300 text-white px-5 py-3 rounded-lg font-semibold flex gap-2 ml-auto cursor-pointer">
-                EXPLORE PRODUCTS <ArrowRight />
-              </button>
+                <button className="bg-neutral-900 hover:bg-neutral-950 transition-all duration-300 text-white px-5 py-3 rounded-lg font-semibold flex gap-2 ml-auto cursor-pointer">
+                  EXPLORE PRODUCTS <ArrowRight />
+                </button>
               </Link>
             </div>
           </div>

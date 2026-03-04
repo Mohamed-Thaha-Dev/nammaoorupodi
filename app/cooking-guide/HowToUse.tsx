@@ -88,6 +88,7 @@ export default function CookingGuide() {
         title="Cooking Guide"
         subtitle=" Simple, delicious ways to add kirai powder to your everyday meals."
         showHeroExitAnimation={true}
+        tag="Keerai Powder Recipes"
       />
       {/* <div className="max-w-6xl mx-auto text-center mb-16">
         <h1 className="guide-title text-5xl font-bold mb-4">

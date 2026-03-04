@@ -12,8 +12,8 @@ export default function AboutPage(){
     <>
     <SubHero title="About Us" subtitle="From Our Village Kitchen to Your Family Table" bg="#f9f9f9" tag="Our Story"/>
     <AboutHeroSection/>
-    <Stats/>
-    {/* <FeatureSection/> */}
+    {/* <Stats/> */}
+    <FeatureSection/>
     <OurProcess/>
     <OurMission/>
     <Banner/>

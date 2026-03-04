@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 
@@ -60,10 +61,11 @@ const ProductSection = () => {
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   {product.desc}
                 </p>
-
-                <button className="px-6 py-2 rounded-full bg-green-700 text-white text-sm hover:bg-green-800 transition">
+              <Link href="/product">
+                <button className="px-6 py-2 rounded-full bg-green-700 text-white text-sm hover:bg-green-800 transition cursor-pointer">
                   View Details
                 </button>
+                </Link>
               </div>
             </div>
           ))}

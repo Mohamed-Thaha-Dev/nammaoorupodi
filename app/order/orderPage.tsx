@@ -1,5 +1,6 @@
 import FeatureSection from "@/Components/Comman/FeatureSection";
 import SubHero from "@/Components/Comman/SubHero";
+import WhyChooseUs from "@/Components/Home/WhyChooseUs";
 import CustomRequest from "@/Components/Order/CustomRequest";
 
 export default function OrderPage(){
@@ -10,6 +11,7 @@ export default function OrderPage(){
             availability." tag="ORDER" bg="#f8f7f2"/>
             <CustomRequest/>
             <FeatureSection/>
+            <WhyChooseUs/>
               </>
     )
 }

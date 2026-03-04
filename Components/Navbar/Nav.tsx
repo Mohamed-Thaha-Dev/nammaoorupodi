@@ -8,7 +8,7 @@ import Image from "next/image";
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Our Kirai", href: "/product" },
+  { name: "Our Keerai", href: "/product" },
   { name: "How to Use", href: "/cooking-guide" },
   { name: "Benefits", href: "/benefits" },
   { name: "Order", href: "/order" },
@@ -67,13 +67,13 @@ export default function MenuBar() {
       {open && (
         <div className="md:hidden bg-[#f5f3ee] border-t border-green-100 px-4 pb-4">
           {navItems.map((item) => (
-            <a
-              key={item.name}
+            <Link
+              key={item.href}
               href={item.href}
               className="block py-2 text-green-900 hover:text-green-600"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       )}

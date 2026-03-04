@@ -1,4 +1,5 @@
 "use client";
+import { h4 } from "framer-motion/client";
 import Image from "next/image";
 import Link from "next/link";
 import React, { lazy, useEffect, useMemo, useRef } from "react";
@@ -24,6 +25,7 @@ export type HeroScrollVideoProps = {
   meta?: ReactNode;
   button?: ReactNode;
   credits?: ReactNode;
+  
 
   // Media
   media?: VideoLike; // string URL or {mp4, webm, ogg}
@@ -37,6 +39,7 @@ export type HeroScrollVideoProps = {
   // Overlay content (shown over sticky media on scroll)
   overlay?: {
     caption?: ReactNode;
+    subheading?:String
     heading?: ReactNode;
     paragraphs?: ReactNode[];
     extra?: ReactNode; // slot for buttons, links, etc.
@@ -107,6 +110,7 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
   overlay = {
     caption: "PROJECT • 07",
     heading: "Clarity in Motion",
+    subheading: "tha",
     paragraphs: [
       "Scroll to expand the frame and reveal the story.",
       "Built with GSAP ScrollTrigger and optional Lenis smooth scroll.",
@@ -547,6 +551,7 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
                 ) : null}
                 <div className="hsv-overlay-content" ref={overlayContentRef}>
                   {overlay?.heading ? <h3>{overlay.heading}</h3> : null}
+                  {overlay?.subheading ? <h4 className="mb-5">{overlay.subheading}</h4> : null}
                   {overlay?.paragraphs?.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
@@ -657,7 +662,7 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
           background: var(--overlay-bg);
           color: var(--overlay-text);
           display: flex;
-         
+          
           flex-direction: column;
           align-items: center;
           text-align: center;
