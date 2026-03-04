@@ -10,31 +10,31 @@ gsap.registerPlugin(ScrollTrigger);
 
 const recipes = [
   {
-    title: "Kirai Idly",
+    title: "keerai Idly",
     steps: [
       "Prepare regular idly batter as usual.",
-      "Add 2 tablespoons of kirai powder to the batter.",
+      "Add 2 tablespoons of keerai powder to the batter.",
       "Mix well until evenly distributed.",
       "Steam the idlies for 10–12 minutes.",
       "Serve hot with chutney and sambar!",
     ],
   },
   {
-    title: "Kirai Dosa",
+    title: "keerai Dosa",
     steps: [
       "Prepare dosa batter a day ahead.",
-      "Add 1–2 tablespoons of kirai powder.",
+      "Add 1–2 tablespoons of keerai powder.",
       "Spread thin on hot tawa.",
       "Drizzle oil and cook until crispy.",
       "Fold and serve hot.",
     ],
   },
   {
-    title: "Kirai Rice (Meals)",
+    title: "keerai Rice (Meals)",
     steps: [
       "Cook rice and let cool slightly.",
       "Heat oil, add mustard & curry leaves.",
-      "Add 2–3 tablespoons kirai powder.",
+      "Add 2–3 tablespoons keerai powder.",
       "Mix with cooked rice well.",
       "Season and serve.",
     ],
@@ -86,7 +86,7 @@ export default function CookingGuide() {
     <section ref={sectionRef} className="min-h-screen bg-[#f2ede2]  ">
       <SubHero
         title="Cooking Guide"
-        subtitle=" Simple, delicious ways to add kirai powder to your everyday meals."
+        subtitle=" Simple, delicious ways to add keerai powder to your everyday meals."
         showHeroExitAnimation={true}
         tag="Keerai Powder Recipes"
       />
@@ -95,7 +95,7 @@ export default function CookingGuide() {
           Cooking Guide
         </h1>
         <p className="text-gray-600 text-lg">
-          Simple, delicious ways to add kirai powder to your everyday meals.
+          Simple, delicious ways to add keerai powder to your everyday meals.
         </p>
       </div> */}
 

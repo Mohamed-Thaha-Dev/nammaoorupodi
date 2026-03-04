@@ -65,7 +65,7 @@ export default function MenuBar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-[#f5f3ee] border-t border-green-100 px-4 pb-4">
+        <div className="md:hidden bg-[#f5f3ee] border-t border-green-100 px-4 pb-4  text-center">
           {navItems.map((item) => (
             <Link
               key={item.href}

@@ -9,26 +9,26 @@ import {
   Youtube,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Footer() {
   const footerLinks = [
     {
       title: "Quick Links",
       links: [
-        { label: "Home", href: "#home" },
-        { label: "About Us", href: "#about" },
-        { label: "Products", href: "#products" },
-        { label: "Contact", href: "#contact" },
+        { label: "Home", href: "/" },
+        { label: "About Us", href: "/about" },
+        { label: "Products", href: "/product" },
+        { label: "Contact", href: "/contact" },
       ],
     },
     {
       title: "Useful Links",
       links: [
-        { label: "FAQs", href: "#faq" },
-        { label: "Custom Orders", href: "#contact" },
+        { label: "Custom Orders", href: "/order" },
         {
           label: "WhatsApp Enquiry",
-          href: "https://wa.me/919080132563",
+          href: "https://wa.me/918610240143",
           pulse: true,
         },
       ],
@@ -93,14 +93,14 @@ function Footer() {
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.label} className="relative">
-                    <a
+                    <Link
                       href={link.href}
                       target={link.href.startsWith("http") ? "_blank" : "_self"}
                       rel="noopener noreferrer"
                       className="hover:text-white transition-colors text-white"
                     >
                       {link.label}
-                    </a>
+                    </Link>
 
                     {link.pulse && (
                       <span className="absolute -left-4 top-2 w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>

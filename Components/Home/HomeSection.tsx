@@ -25,7 +25,6 @@ export type HeroScrollVideoProps = {
   meta?: ReactNode;
   button?: ReactNode;
   credits?: ReactNode;
-  
 
   // Media
   media?: VideoLike; // string URL or {mp4, webm, ogg}
@@ -39,7 +38,7 @@ export type HeroScrollVideoProps = {
   // Overlay content (shown over sticky media on scroll)
   overlay?: {
     caption?: ReactNode;
-    subheading?:String
+    subheading?: String;
     heading?: ReactNode;
     paragraphs?: ReactNode[];
     extra?: ReactNode; // slot for buttons, links, etc.
@@ -505,7 +504,7 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
           alt="leaf"
           width={300}
           height={100}
-          className="absolute top-10 rotate-90 -left-5 md:w-90 w-40 opacity-80 pointer-events-none leaf-1"
+          className="absolute top-10 rotate-90 -left-5 lg:w-90 w-40 md:opacity-80 opacity-30 pointer-events-none leaf-1 "
         />
 
         <Image
@@ -513,18 +512,20 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
           alt="leaf"
           width={300}
           height={100}
-          className="absolute bottom-0 rotate-180 -right-5 md:w-80 w-40 opacity-70 pointer-events-none leaf-2"
+          className="absolute bottom-0 rotate-180 -right-5 lg:w-80 w-40 md:opacity-70 opacity-30 pointer-events-none leaf-2"
         />
 
         <div className="hsv-headline mt-20">
-          <h1 className="hsv-title [font-family:var(--font-heading)]">{title}</h1>
+          <h1 className="hsv-title [font-family:var(--font-heading)]">
+            {title}
+          </h1>
           {subtitle ? <h2 className="hsv-subtitle">{subtitle}</h2> : null}
           {button ? (
             <div className="mt-6">
               <Link href="/order">
-              <button className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:scale-105 transition cursor-pointer">
-                {button}
-              </button>
+                <button className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:scale-105 transition cursor-pointer">
+                  {button}
+                </button>
               </Link>
             </div>
           ) : null}
@@ -545,13 +546,18 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
             <div className="hsv-overlay" ref={overlayRef}>
               <div className="mt-10 flex flex-col">
                 {overlay?.caption ? (
-                  <div className="hsv-caption [font-family:var(--font-heading)]" ref={overlayCaptionRef}>
+                  <div
+                    className="hsv-caption [font-family:var(--font-heading)]"
+                    ref={overlayCaptionRef}
+                  >
                     {overlay.caption}
                   </div>
                 ) : null}
                 <div className="hsv-overlay-content" ref={overlayContentRef}>
                   {overlay?.heading ? <h3>{overlay.heading}</h3> : null}
-                  {overlay?.subheading ? <h4 className="mb-5">{overlay.subheading}</h4> : null}
+                  {overlay?.subheading ? (
+                    <h4 className="mb-5">{overlay.subheading}</h4>
+                  ) : null}
                   {overlay?.paragraphs?.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}

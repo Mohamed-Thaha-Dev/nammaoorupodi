@@ -47,24 +47,6 @@ export default function ContactPage() {
 
   return (
     <div className="bg-[#f6f9f4] min-h-screen">
-      {/* Hero Section */}
-      {/* <section className="relative py-24 bg-green-700 text-white text-center overflow-hidden">
-        <img
-          src="/images/leaf1.png"
-          className="absolute top-10 left-10 w-40 opacity-10"
-          alt="leaf"
-        />
-        <img
-          src="/images/leaf2.png"
-          className="absolute bottom-10 right-10 w-52 opacity-10"
-          alt="leaf"
-        />
-
-        <h1 className="text-5xl font-bold mb-4">Contact Us 🌿</h1>
-        <p className="text-lg text-green-100">
-          We'd love to hear from you. Reach out for orders or enquiries.
-        </p>
-      </section> */}
       <SubHero
         title="Contact us"
         subtitle="We'd love to hear from you. Reach out for orders or enquiries."
@@ -87,7 +69,7 @@ export default function ContactPage() {
 
             <div className="flex items-center gap-4">
               <Phone className="text-green-700" />
-              <span className="text-gray-700">+91 98765 43210</span>
+              <span className="text-gray-700">+91 86102 40143</span>
             </div>
 
             <div className="flex items-center gap-4">
@@ -115,7 +97,7 @@ export default function ContactPage() {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Your Name"
+              placeholder="Enter your name"
               required
               className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-600 outline-none"
             />
@@ -125,7 +107,7 @@ export default function ContactPage() {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Your Email"
+              placeholder="Enter your email"
               required
               className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-600 outline-none"
             />
@@ -135,7 +117,7 @@ export default function ContactPage() {
               name="phone"
               value={form.phone}
               onChange={handleChange}
-              placeholder="Phone Number"
+              placeholder="Enter your phone number"
               className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-600 outline-none"
             />
 
