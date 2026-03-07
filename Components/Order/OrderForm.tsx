@@ -47,7 +47,7 @@ export default function OrderForm() {
         return;
       }
 
-      formData.append("access_key", "f4e15e2e-06e3-4129-8efe-09a8d4eef9d9");
+      formData.append("access_key", "3c06d50c-c628-42ea-9422-d1d5527ab61f");
       formData.append("products", formattedProducts);
 
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -85,7 +85,7 @@ export default function OrderForm() {
           </p>
           <button
             onClick={() => setSubmitted(false)}
-            className="mt-6 text-green-600 font-medium text-sm hover:underline"
+            className="mt-6 text-green-600 font-medium text-sm hover:underline cursor-pointer"
           >
             Submit another request
           </button>

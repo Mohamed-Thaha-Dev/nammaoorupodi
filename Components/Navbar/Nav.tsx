@@ -71,6 +71,7 @@ export default function MenuBar() {
               key={item.href}
               href={item.href}
               className="block py-2 text-green-900 hover:text-green-600"
+              onClick={()=>setOpen(false)}
             >
               {item.name}
             </Link>

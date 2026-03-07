@@ -27,6 +27,7 @@ export default function HomePage(){
       <ProductSection/>
       <WhyChooseUs/>
       <Banner/>
+
     </>
   )
     

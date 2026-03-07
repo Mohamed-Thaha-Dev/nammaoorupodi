@@ -6,6 +6,8 @@ import Navbar from "@/Components/Navbar/navbar";
 import Footer from "@/Components/Footer/Footer";
 // import { Playfair_Display, Poppins,Inter } from "next/font/google";
 import { Lora, Nunito } from "next/font/google";
+import WhatsappButton from "@/Components/Comman/WhatsappBotton";
+import WhatsappWrapper from "@/Components/Comman/WhatsappWrapper";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -63,7 +65,7 @@ export default function RootLayout({
           <Navbar />
 
           <main className="flex-1">{children}</main>
-
+          <WhatsappWrapper/>
           <Footer />
         </div>
       </body>

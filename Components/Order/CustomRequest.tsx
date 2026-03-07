@@ -65,7 +65,7 @@ export default function CustomRequest() {
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 items-center">
         <div>
 
-        <OrderForm />
+        <OrderForm  />
         </div>
         <div className="relative w-full h-full overflow-hidden rounded-r-2xl shadow-lg bg-white">
           <Image

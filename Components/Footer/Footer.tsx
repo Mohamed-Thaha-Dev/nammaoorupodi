@@ -28,7 +28,7 @@ function Footer() {
         { label: "Custom Orders", href: "/order" },
         {
           label: "WhatsApp Enquiry",
-          href: "https://wa.me/918610240143",
+          href: "https://wa.me/919944078982",
           pulse: true,
         },
       ],
@@ -43,8 +43,8 @@ function Footer() {
     },
     {
       icon: <Phone size={18} />,
-      text: "+91 86102 40143",
-      href: "tel:+918610240143",
+      text: "+91 99440 78982",
+      href: "tel:+919944078982",
     },
     {
       icon: <MapPin size={18}  />,
